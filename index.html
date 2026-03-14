@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロック崩しゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ブロック崩しゲーム</h1>
+        <div class="info-panel">
+            <div class="info-item">
+                <span class="label">スコア:</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">ライフ:</span>
+                <span class="value" id="life">3</span>
+            </div>
+            <div class="info-item">
+                <span class="label">レベル:</span>
+                <span class="value" id="level">1</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">ゲーム開始</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>一時停止</button>
+            <button id="resetBtn" class="btn btn-secondary">リセット</button>
+        </div>
+        <div id="gameOverScreen" class="overlay hidden">
+            <div class="modal">
+                <h2 id="gameOverTitle">ゲームオーバー</h2>
+                <p id="gameOverMessage"></p>
+                <button id="restartBtn" class="btn btn-primary">もう一度プレイ</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
